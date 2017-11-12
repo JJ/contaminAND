@@ -5,6 +5,7 @@
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Concert+One|Dosis|Overpass+Mono');
 
 /*********************************************
  * GLOBAL STYLES
@@ -20,7 +21,7 @@ body {
   background-color: #2b2b2b; }
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: "Dosis", sans-serif;
   font-size: 40px;
   font-weight: normal;
   color: #eee; }
@@ -51,7 +52,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eee;
-  font-family: "League Gothic", Impact, sans-serif;
+  font-family: "Dosis", Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -59,10 +60,13 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em; }
+    font-size: 3.77em;
+    font-family: 'Abril Fatface', cursive;}
 
 .reveal h2 {
-  font-size: 2.11em; }
+    font-size: 2.11em;
+    font-family: 'Concert One', cursive;
+}
 
 .reveal h3 {
   font-size: 1.55em; }
