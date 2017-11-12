@@ -23,13 +23,15 @@
 		</script>
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-			  <section><h1>Verdades<h1>
-			    <h2>y no tanto</h2>
-			  <h3>en series de datos medioambientales de
-			    la junta de Andalucía</h3>
-			  </section>
+	  <div class="reveal">
+	    <div class="slides">
+	      <section><h1>Verdades<h1>
+		<h2>y no tanto</h2>
+		<h3>en series de datos medioambientales de
+		  la junta de Andalucía</h3>
+		<h2>Merelo (UGR), Alex Pérez (Middlesex), Israel
+		  Blancas (RTI)</h2>
+	      </section>
 				<section>Slide 2</section>
 			</div>
 		</div>
@@ -38,17 +40,28 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
+		 // More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+		 // - https://github.com/hakimel/reveal.js#dependencies
+		 Reveal.initialize({
+		   // Display a presentation progress bar
+		   progress: true,
+		   
+		   // Display nilTODO: he page number of the current slide
+		   slideNumber: true,
+		   
+		   // Push each slide change to the browser history
+		   history: true,
+		   
+		   // Enable keyboard shortcuts for navigation
+		   keyboard: true,
+		   width: "90%",
+		   dependencies: [
+		     { src: 'plugin/markdown/marked.js' },
+		     { src: 'plugin/markdown/markdown.js' },
+		     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
-			});
+		 });
 		</script>
 	</body>
 </html>
