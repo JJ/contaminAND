@@ -1,6 +1,5 @@
 library("entropy")
 library("ggplot2")
-library("ggthemes")
 
 datos.dia.CO <- read.csv("contaminAND-gr-conjunto-date-CO.csv", fileEncoding="latin1")
 datos.dia.CO$day <- as.factor(datos.dia.CO$day)
