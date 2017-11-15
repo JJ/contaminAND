@@ -7,6 +7,8 @@ library(reshape)
 library(ggplot2)
 library(circular)
 
+# Descarga granada.json de https://doi.org/10.6084/m9.figshare.5598037.v1
+
 x <- fromJSON("granada.json")
 granada <- ldply(x, data.frame)
 granada$CONAN<-as.numeric(granada$CO)

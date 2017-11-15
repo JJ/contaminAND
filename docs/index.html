@@ -1,93 +1,124 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>contaminAND - analizando datos medioambientales
+      de la Junta</title>
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/extra.css">
+    <link rel="stylesheet" href="css/theme/league.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement( 'link' );
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+     document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
 
-		<title>contaminAND - analizando datos medioambientales
-		de la Junta</title>
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/league.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-	  <div class="reveal">
-	    <div class="slides">
-	      <section><h1>Verdades<h1>
-		<h2>y no tanto</h2>
-		<h3>en series de datos medioambientales de
-		  la junta de Andalucía</h3>
-		<h2>Merelo (UGR), Alex Pérez (Middlesex), Israel
-		  Blancas (RTI)</h2>
-	      </section>
-	      
-	      <section><img src='img/meetup.png' alt='el meetup'>
-		<aside class='notes'>Todo empezó aquí, en el meetup,
-		con una serie de gente con la idea vaga de trabajar
-		con proyectos medioambientales, en el contexto de que
-		estaban empezando a cerrar Madrid al tráfico de fuera
-		varios días por la contaminación atmosférica. Pero eso
-		  no podía suceder en Granada, ¿no? Pues quién sabe...</aside>
-	      </section>
-
-	      <section
-	    data-background='https://farm3.staticflickr.com/2924/32505485313_e256c6d19e_k_d.jpg'
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section><h1>Verdades<h1>
+	  <h2>y no tanto</h2>
+	  <h3>en series de datos medioambientales de
+	    la junta de Andalucía</h3>
+	  <h2>Merelo (UGR), Alex Pérez (Middlesex), Israel
+	    Blancas (RTI)</h2>
+	</section>
+	
+	<section><img src='img/meetup.png' alt='el meetup'>
+	  <aside class='notes'>Todo empezó aquí, en el meetup,
+	    con una serie de gente con la idea vaga de trabajar
+	    con proyectos medioambientales, en el contexto de que
+	    estaban empezando a cerrar Madrid al tráfico de fuera
+	    varios días por la contaminación atmosférica. Pero eso
+	    no podía suceder en Granada, ¿no? Pues quién sabe...</aside>
+	</section>
+	
+	<section
+	  data-background='https://farm3.staticflickr.com/2924/32505485313_e256c6d19e_k_d.jpg'
 alt='pegatinas'>
-	      </section>
-				
-				<section>
-					<section>
-						<h2>Estaciones meteorológicas en Granada</h2>
-						<aside class='notes'>Granada no es una ciudad muy extensa,
-						al menos no tanto como Madrid pero si lo suficiente como para causar
-						una contaminación considerable. Y, por tanto, 
-						se espera que haya instalaciones
-						para pedir la calidad del aire. ¿Cuántas pensáis que hay?
-						</aside>
-					</section>
-					
-					<section>
-						<img height="600dp" 
-						src='../recursos/estacion_meteorologica_Norte.jpg' 
-						alt='Estación meteorológica en la Zona Norte'>
-						<aside class='notes'>Pues una para la Zona Norte.
-						</aside>
-					</section>
-				
-					<section>
-						<img height="600dp" src='../recursos/estacion.jpg' alt='Estación
-						meteorológica en el Paseo del Violón'>
-						<aside class='notes'>Y otra para "el centro" de la ciudad.
-						</aside>
-					</section>
-					
-					<section>
-						<img height="700dp" src='img/mapa.jpg' alt='Mapa indicando la 
-						poisición de las estaciones'>
-						<aside class='notes'>Aquí podemos observar dónde se encuentran 
-						las dos estaciones meteorológicas respecto a Granada. ¿Qué pasa
-						con el resto de la ciudad? Es claro que condiciones como la
-						densidad de tráfico no son las mismas a lo largo de toda la ciudad.
-						¿Cómo extrapolar los datos de esos dos sensores a todo el resto
-						de la ciudad?
-						</aside>
-					</section>
-					
-				</section>
-	    </div>
-	  </div>
+	</section>
+	
+	<section>
+	  <section>
+	    <h2>Estaciones meteorológicas en Granada</h2>
+	    <aside class='notes'>Granada no es una ciudad muy extensa,
+	      al menos no tanto como Madrid pero si lo suficiente como para causar
+	      una contaminación considerable. Y, por tanto, 
+	      se espera que haya instalaciones
+	      para pedir la calidad del aire. ¿Cuántas pensáis que hay?
+	    </aside>
+	  </section>
+	  
+	  <section>
+	    <h2>Estación Granada Norte</h2>
+	    <img height="600dp" 
+		 src='../recursos/estacion_meteorologica_Norte.jpg' 
+		 alt='Estación meteorológica en la Zona Norte'>
+	    <aside class='notes'>Pues una para la Zona Norte.
+	    </aside>
+	  </section>
+	  
+	  <section>
+	    <h2>Estación del Palacio de Congresos</h2>
+	    <img height="600dp" src='../recursos/estacion.jpg' alt='Estación
+		 meteorológica en el Paseo del Violón'>
+	    <aside class='notes'>Y otra para "el centro" de la ciudad.
+	    </aside>
+	  </section>
+	  
+	  <section>
+	    <img height="700dp" src='img/mapa.jpg' alt='Mapa indicando la 
+		 poisición de las estaciones'>
+	    <aside class='notes'>Aquí podemos observar dónde se encuentran 
+	      las dos estaciones meteorológicas respecto a Granada. ¿Qué pasa
+	      con el resto de la ciudad? Es claro que condiciones como la
+	      densidad de tráfico no son las mismas a lo largo de toda la ciudad.
+	      ¿Cómo extrapolar los datos de esos dos sensores a todo el resto
+	      de la ciudad?
+	    </aside>
+	  </section>
+	  
+	</section>
+
+	<!-- errores -->
+	<section>
+
+	  <section data-background='img/captura.png' alt='capturando
+		   datos'>
+	    <h1>Usando Web::SIVA en Perl para capturar datos</h1>
+	  </section>
+
+	  <section data-background='img/isra-estación.JPG' alt='Isra
+		   en la estación del Norte'>
+	    <h1>Pero ¿esto funciona?</h1>
+	  </section>
+	  
+	  <section
+	data-background='https://raw.githubusercontent.com/JJ/contaminAND/master/datos/GRANADA-NORTE-circle.png'
+alt='Granada Norte'>
+	    <h1>Granada Norte</h1>
+	  </section>
+
+	  <section
+	    data-background='https://github.com/JJ/contaminAND/raw/master/datos/PALACIO%20DE%20CONGRESOS-circle.png'
+alt='Palacio de Congresos'>
+	    <h1>Palacio de Congresos</h1>
+	  </section>
+	</section>
+	
+      </div>
+    </div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
