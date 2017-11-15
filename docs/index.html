@@ -116,6 +116,30 @@ alt='Palacio de Congresos'>
 	    <h1>Palacio de Congresos</h1>
 	  </section>
 	</section>
+
+	<!-- Lejos del caos -->
+	<section>
+	  <section data-background='img/repeticion.png' alt='Repitiendo datos'>
+	    <h1>Ese demonio de Maxwell...</h1>
+
+	    <aside class='notes'>Es casi imposible que se repita una
+	  medición de un gas, y menos de 10 en 10 minutos. Parece que
+	      estuviera el demonio de Maxwell actuando</aside>
+	  </section>
+
+	  <section><h1>Información <=> Compresión</h1>
+	    <pre><code>library("entropy")
+library("ggplot2")
+library(data.table)
+datos.dia.CO <- read.csv("contaminAND-gr-congresos-CO.csv", fileEncoding="latin1")
+datos.dia.CO$day <- as.factor(datos.dia.CO$day)
+datos.dia.CO$CO <- as.numeric(datos.dia.CO$CO)
+entropies.CO <-
+    as.data.frame(as.table( with(datos.dia.CO,tapply(CO,day,entropy))))
+entropies.shrink.CO <-
+    as.data.frame(as.table(with(datos.dia.CO,tapply(CO,day,entropy.shrink))))
+	    </code></pre>
+	</section>
 	
       </div>
     </div>

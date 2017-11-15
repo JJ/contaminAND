@@ -21,3 +21,5 @@ ggplot(entropy.mean,aes(x=day,y=entropy))+geom_point()
 ggplot(entropy.mean,aes(x=mean.CO,y=entropy))+geom_point()
 ggplot(entropy.mean,aes(x=median.CO,y=entropy))+geom_point()
 ggplot(entropy.mean,aes(x=mean.CO,y=entropy.shrink))+geom_point()
+
+ggplot(entropy.mean,aes(x=day,y=entropy.shrink,color=mean.CO,size=entropy))+geom_point()+theme_tufte()+ scale_colour_gradient2()
