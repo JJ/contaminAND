@@ -1,0 +1,47 @@
+#perl
+
+#Downloads from one date to the next, or today by default.
+use strict;
+use warnings;
+
+use v5.20;
+
+use lib qw(../lib lib);
+
+use DateTime;
+use Web::SIVA;
+use JSON;
+use Time::Piece;
+ use Time::Seconds;
+
+
+my $province = shift || "gr";
+my $start = shift || "2005-01-01";
+
+my $t_start = Time::Piece->strptime($start, '%Y-%m-%d');
+
+
+my $last_day = Time::Piece->new;
+$last_day = $last_day- ONE_DAY;;
+my $t=$t_start;
+my $year = $t->strftime('%Y');
+my $mes = $t->strftime('%m');
+my $dia = $t->strftime('%d');
+my $siva = new Web::SIVA $province;
+my $day_data = $siva->day( $dia, $mes, $year );
+my @data_for;
+while ( $last_day > $t ) {
+    
+
+    $year = $t->strftime('%Y');
+    $mes = $t->strftime('%m');
+    $dia = $t->strftime('%d');
+
+
+    $day_data =$siva->day( $dia, $mes, $year );
+    
+    push @data_for, $day_data;
+    $t+= ONE_DAY;
+    
+}
+say  encode_json( \@data_for);
