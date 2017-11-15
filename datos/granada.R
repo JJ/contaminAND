@@ -45,7 +45,5 @@ for ( i in c("PALACIO DE CONGRESOS","GRANADA-NORTE") ) {
               axis.text.y=element_text(size=5))
     p2
     name <- paste0(i,"-circle")
-    ggsave(paste0(name,".png"))
-    ply <- ggplotly(p2)
-    htmlwidgets::saveWidget(p, paste0(name,".html"))
+    ggsave(paste0(name,".png"),width=16,height=9)
 }
