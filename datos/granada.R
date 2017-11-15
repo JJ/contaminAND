@@ -7,7 +7,7 @@ library(reshape)
 library(ggplot2)
 library(circular)
 
-x <- fromJSON("granada.json")
+x <- fromJSON(file="granada.json")
 granada <- ldply(x, data.frame)
 granada$CONAN<-as.numeric(granada$CO)
 granada$O3NAN<-as.numeric(granada$O3)
